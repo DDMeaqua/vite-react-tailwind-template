@@ -7,7 +7,6 @@ function App() {
   useEffect(() => {
     if (typingDone) {
       console.log("Typing finished!");
-      // 你可以在这里执行其他操作，例如显示一个提示或者改变组件状态
     }
   }, [typingDone]);
 
@@ -21,14 +20,14 @@ function App() {
                 .typeString("Build GPTs in Minutes, No Coding Required")
                 .pauseFor(1500)
                 .callFunction(() => {
-                  setTypingDone(true); // 设置状态为 true，表示打字完成
+                  setTypingDone(true);
                 })
                 .start();
             }}
             options={{
               loop: false,
-              delay: 50, // 调整这个值以加快打字速度，值越小速度越快
-              deleteSpeed: Infinity, // 这个值确保打完内容后不删除
+              delay: 50,
+              deleteSpeed: Infinity,
             }}
           />
         </div>
